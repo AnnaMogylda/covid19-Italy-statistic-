@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h1> COVID-19 information in the Italy </h1>
+            <div class="wrapper">
+                <div class="generalDataStyles">
+                    <div> Total number of lab-confirmed IT cases </div>
+                    <p class="casesStyle" id="totalCases"> </p>
+                    <p class="descCases">Total number of people who have had a positive test result </p>
+                </div>
+                <div class="generalDataStyles">
+                    <div> Daily number of lab-confirmed IT cases </div>
+                    <p class="casesStyle" id="casesForDay"> </p>
+                    <p class="descCases"> Number of additional cases for the last day</p> 
+                </div>
+                <div class="generalDataStyles">
+                    <div> Total number of COVID-19 associated IT deaths </div>
+                    <p class="casesStyle" id="totalDeaths"> </p>
+                    <p class="descCases"> Deaths of people who have had a positive test result </p>
+                </div>
+                <div class="generalDataStyles">
+                    <div> Daily number of COVID-19 associated IT deaths</div>
+                    <p class="casesStyle" id="deathsForDay"> </p>
+                    <p class="descCases">Number of additional deaths for the last day </p>
+                </div>
+                <div class="generalDataStyles">
+                    <div> Total number of COVID-19 associated IT recovery </div>
+                    <p class="casesStyle" id="totalRecovery"> </p>
+                    <p class="descCases">Recovery of people who have had a positive test result</p>
+                </div>
+                <div class="generalDataStyles">
+                    <div> Daily number of COVID-19 associated IT recovery</div>
+                    <p class="casesStyle" id="recoveryForDay"> </p>
+                    <p class="descCases">Number of additional recovered people for the last day </p>
+                </div>
+                <div class="generalDataStyles">
+                    <div> Average number of COVID-19 associated IT deaths (deaths to cases ratio) </div>
+                    <p class="casesStyle" id="averageDeaths"> </p>
+                </div>
+                <div class="generalDataStyles">
+                    <div id="piechart" style="width: 100%; height: 200px;"></div>
+                </div>
+            </div>
+        </section>
+        <section class="dataBlocks">
+            <div class="dataBlocksTitle">Total number of lab-confirmed cases in Italy by specimen date</div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#chart_1">Chart</a></li>
+                <li><a data-toggle="tab" href="#table_1">Table</a></li>
+            </ul>
+            <div class="tab-content tableStyles">
+                <div id="chart_1" class="tab-pane fade in active">
+                    <div id="totalDataConfirmedCharts" class="chartsStyles"style="width: 900px; height: 500px"></div>
+                </div>
+                <div id="table_1" class="tab-pane fade">
+                    <table class="table table-fixed-head">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Previously reported</th>
+                                <th scope="col">Change</th>
+                                <th scope="col">Total confirmed cases</th>  
+                            </tr>
+                        </thead>
+                        <tbody  id="totalDataConfirmedDetailed"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="dataBlocks">
+            <div class="dataBlocksTitle">Daily number of lab-confirmed cases in Italy by specimen date</div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#chart_2">Chart</a></li>
+                <li><a data-toggle="tab" href="#table_2">Table</a></li>
+            </ul>
+            <div class="tab-content tableStyles">
+                <div id="chart_2" class="tab-pane fade in active">
+                    <div id="dailyDataConfirmedCharts" class="chartsStyles"style="width: 900px; height: 500px"></div>
+                </div>
+                <div id="table_2" class="tab-pane fade">
+                    <table class="table table-fixed-head">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Previously reported</th>
+                                <th scope="col">Change</th>
+                                <th scope="col">Currently reported</th>  
+                            </tr>
+                        </thead>
+                        <tbody  id="dailyDataConfirmedDetailed"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="dataBlocks">
+            <div class="dataBlocksTitle">Total number of COVID-19 associated IT deaths by date reported</div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#chart_3">Chart</a></li>
+                <li><a data-toggle="tab" href="#table_3">Table</a></li>
+            </ul>
+            <div class="tab-content tableStyles">
+                <div id="chart_3" class="tab-pane fade in active">
+                    <div id="totalDeathsCharts" class="chartsStyles"style="width: 900px; height: 500px"></div>
+                </div>
+                <div id="table_3" class="tab-pane fade">
+                    <table class="table table-fixed-head">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Total deaths</th>  
+                            </tr>
+                        </thead>
+                        <tbody  id="totalDeathsDetailed"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>  
+        <section class="dataBlocks">
+            <div class="dataBlocksTitle">Daily additional COVID-19 associated UK deaths by date reported</div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#chart_4">Chart</a></li>
+                <li><a data-toggle="tab" href="#table_4">Table</a></li>
+            </ul>
+            <div class="tab-content tableStyles">
+                <div id="chart_4" class="tab-pane fade in active">
+                    <div id="dailyDeathsCharts" class="chartsStyles"style="width: 900px; height: 500px"></div>
+                </div>
+                <div id="table_4" class="tab-pane fade">
+                    <table class="table table-fixed-head">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Daily deaths </th>  
+                            </tr>
+                        </thead>
+                        <tbody  id="dailyDeathsDetailed"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>   
+    </div>          
+    <script src="js/main.js"></script>
+</body>
+</html>

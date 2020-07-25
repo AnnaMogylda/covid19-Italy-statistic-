@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.generalDataStyles{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 20px;
+    border-bottom:1px solid #beb8b8;
+    padding-top: 20px;
+}
+
+.generalDataStyles > div,
+.dataBlocksTitle{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.generalDataStyles .casesStyle{
+    font-size: 26px;
+    color: #009688;
+    font-weight: 700;
+}
+
+.generalDataStyles .descCases{
+    color: #8a8989;
+}
+
+.dataBlocks{
+    height: 500px;
+    margin-top: 60px;
+}
+
+.nav-tabs{
+    padding-top: 40px;
+}
+
+a{
+    font-size: 18px;
+    color: #555;
+}
+
+a:hover{
+   color: #009688; 
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #009688;
+}
+
+.table-fixed-head {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 400px;
+}
+  
+.table-fixed-head th,
+.table-fixed-head td {
+    padding: 5px;
+    text-align: center;
+    width: 33.333vw;
+}
+  
+.table-fixed-head thead {
+    background-color: #333;
+    color: #FDFDFD;
+}
+  
+.table-fixed-head thead tr {
+    display: block;
+    position: relative;
+}
+  
+.table-fixed-head tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: calc(400px - 30px);
+}
+  
+.table-fixed-head tbody tr:nth-child(even) {
+    background-color: #DDD;
+}
