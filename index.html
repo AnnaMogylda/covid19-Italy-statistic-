@@ -13,8 +13,18 @@
 </head>
 <body>
     <div class="container">
+        <section class="select">
+            <span> Select the country:</span>
+            <select name="select" id="select">
+                <option value="Finland"> Finland </option>
+                <option value="Germany"> Germany </option>
+                <option value="Italy" selected> Italy </option>
+                <option value="Poland"> Poland </option>
+                <option value="Ukraine"> Ukraine </option>
+            </select>
+        </section>
         <section>
-            <h1> COVID-19 information in the Italy </h1>
+            <h1> COVID-19 information in the <span id="country"> Italy </span></h1>
             <div class="wrapper">
                 <div class="generalDataStyles">
                     <div> Total number of lab-confirmed IT cases </div>
